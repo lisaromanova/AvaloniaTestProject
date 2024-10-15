@@ -11,5 +11,16 @@
   
     <Application.Styles>
         <FluentTheme />
+		<Style Selector="TextBlock.Header">
+		<Setter Property="FontFamily" Value="Comic Sans MS"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="FontWeight" Value="Black"/>
+		<Setter Property="Foreground" Value="#FF04A0FF"/>
+	</Style>
     </Application.Styles>
+
+
+
 </Application>
