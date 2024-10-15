@@ -1,9 +1,11 @@
-﻿namespace AvaloniaApplication1.ViewModels
+﻿using Avalonia.Controls;
+using ReactiveUI;
+
+namespace AvaloniaApplication1.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-#pragma warning disable CA1822 // Mark members as static
-        public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+        private UserControl uc = new AuthorizationPage();
+        public UserControl UC { get => uc; set => this.RaiseAndSetIfChanged(ref uc, value); }
     }
 }
