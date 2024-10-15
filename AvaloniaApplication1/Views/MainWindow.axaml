@@ -14,7 +14,19 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-	<ContentControl Content="{Binding UC}" Name="MainFrame"/>
-
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0">
+			<Image Margin="0,0,15,0" Source="/Assets/school_logo.png" Width="50"/>
+			<TextBlock Classes="Header" Text="Школа языков Леарн"/>
+		</StackPanel>
+		<StackPanel Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0">
+			<TextBlock Classes="Text" Text="Режим администратора" Margin="0,0,0,10"/>
+			<TextBox Classes="Default" FontFamily="Comic Sans MS" Width="100" Name="txtAdmin"/>
+		</StackPanel>
+		<ContentControl Grid.Row="1" Content="{Binding UC}" Name="MainFrame"/>
+	</Grid>
 </Window>
