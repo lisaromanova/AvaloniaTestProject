@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +11,8 @@ namespace AvaloniaApplication1.Models
 {
     public partial class Service
     {
+        public static bool adminButton = false;
+
         public string myString
         {
             get
@@ -30,29 +35,18 @@ namespace AvaloniaApplication1.Models
                 return c;
             }
         }
-        public static Visibility AdminButtons
-        {
-            get
-            {
-                return adminButton;
-            }
-            set
-            {
-                adminButton = value;
-            }
 
-        }
-        public string PriceVisibility
+        public bool PriceVisibility
         {
             get
             {
                 if (Discount == 0)
                 {
-                    return "Collapsed";
+                    return false;
                 }
                 else
                 {
-                    return "Visible";
+                    return true;
                 }
             }
         }
@@ -84,11 +78,23 @@ namespace AvaloniaApplication1.Models
                 }
             }
         }
-        public BitmapImage ImageNew
+        public static bool AdminButtons
         {
             get
             {
-                return new BitmapImage(new Uri(Environment.CurrentDirectory + MainImagePath, UriKind.RelativeOrAbsolute));
+                return adminButton;
+            }
+            set
+            {
+                adminButton = value;
+            }
+
+        }
+        public Bitmap ImageNew
+        {
+            get
+            {
+                 return new Bitmap(Environment.CurrentDirectory + "\\" + Mainimagepath);
             }
         }
     }

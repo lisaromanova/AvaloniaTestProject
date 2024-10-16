@@ -49,24 +49,24 @@
 		<ListBox Grid.Row="1" ItemsSource="{Binding PageAuthorizationViewVM.ServiceList}">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
-					<StackPanel>
+					<StackPanel Background="{Binding ColorBack}">
 						<Border BorderThickness="1" CornerRadius="10" BorderBrush="Black">
 							<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
 								<StackPanel>
-									<Image Width="150" Height="150"/>
+									<Image Width="150" Height="150" Tag="{Binding Id}" Source="{Binding ImageNew}"/>
 								</StackPanel>
 								<DockPanel Margin="10,0,0,0">
 									<StackPanel DockPanel.Dock="Top">
-										<TextBlock Text = "{Binding Title}"/>
+										<TextBlock Text="{Binding Title}"/>
 										<StackPanel Orientation="Horizontal">
-											<TextBlock Margin="0,0,5,0" TextDecorations="Strikethrough" Name="txtPrice"/>
-											<TextBlock Name="txtPriceDisc"/>
+											<TextBlock Margin="0,0,5,0" TextDecorations="Strikethrough" IsVisible="{Binding PriceVisibility}" Text="{Binding PriceDisc}"/>
+											<TextBlock Text="{Binding myString}"/>
 										</StackPanel>
-										<TextBlock/>
+										<TextBlock Text="{Binding Sk}" IsVisible="{Binding PriceVisibility}"/>
 									</StackPanel>
 									<StackPanel Height="30" DockPanel.Dock="Bottom" Margin="0,0,0,0" Orientation="Horizontal">
-										<Button Margin="0,0,5,0" Name="btnUpdate"  Width="150" Content="Редактировать" Classes ="btnUpdateTemplate"/>
-										<Button Name="btnDelete" Width="100" Content="Удалить" Classes ="btnUpdateTemplate"/>
+										<Button Margin="0,0,5,0" IsVisible="{Binding AdminButtons}" Width="150" Content="Редактировать" Classes="btnUpdateTemplate" Tag="{Binding Id}"/>
+										<Button Width="100" IsVisible="{Binding AdminButtons}" Content="Удалить" Classes="btnUpdateTemplate" Tag="{Binding Id}"/>
 									</StackPanel>
 								</DockPanel>
 							</StackPanel>
@@ -78,9 +78,9 @@
 		<StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
 			<TextBlock  />
 		</StackPanel>
-		<Button Name="btnAddService" Content="Добавить услугу" Width="150" Grid.Row="0" HorizontalAlignment="Right" Classes="btnTemplate" />
-		<Button Name="btnServiceClient" Content="Записать клиента на услугу" Width="230" Grid.Row="2" HorizontalAlignment="Left" Classes="btnTemplate" />
-		<Button Name="btnAdminWindow" Content="Окно администратора" Width="180" Grid.Row="2" HorizontalAlignment="Right" Classes="btnTemplate" />
+		<Button Content="Добавить услугу" Width="150" Grid.Row="0" HorizontalAlignment="Right" Classes="btnTemplate" />
+		<Button Content="Записать клиента на услугу" Width="230" Grid.Row="2" HorizontalAlignment="Left" Classes="btnTemplate" />
+		<Button Content="Окно администратора" Width="180" Grid.Row="2" HorizontalAlignment="Right" Classes="btnTemplate" />
 	</Grid>
 
 </UserControl>

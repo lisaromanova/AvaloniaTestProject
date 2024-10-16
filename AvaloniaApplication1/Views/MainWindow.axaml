@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/school_logo.ico"
         Title="AvaloniaApplication1">
 
     <Design.DataContext>
@@ -20,7 +20,7 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		<StackPanel Grid.Row="0">
-			<Image Margin="0,0,15,0" Source="/Assets/school_logo.png" Width="50"/>
+			<Image Name="nb" Margin="0,0,15,0" Source="/Assets/school_logo.png" Width="50"/>
 			<TextBlock Classes="Header" Text="Школа языков Леарн"/>
 		</StackPanel>
 		<StackPanel Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0">

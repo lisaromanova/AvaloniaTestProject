@@ -27,7 +27,7 @@ public partial class AvaloniaTestBaseContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=edu.pg.ngknn.local;Port=5432;Database=AvaloniaTestBase;Username=Romanova;Password=9*EV6!mSZX^b");
+        => optionsBuilder.UseNpgsql("Host=ngknn.ru;Port=5442;Database=AvaloniaTestBase;Username=Romanova;Password=9*EV6!mSZX^b");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
