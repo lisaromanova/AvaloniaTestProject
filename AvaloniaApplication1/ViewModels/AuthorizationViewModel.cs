@@ -15,5 +15,7 @@ namespace AvaloniaApplication1.ViewModels
             DBConnect = dBConnect;
             serviceList = DBConnect.Services.ToList();
         }
+
+        public List<Service> ServiceList { get => serviceList; set => this.RaiseAndSetIfChanged(ref serviceList, value); }
     }
 }
