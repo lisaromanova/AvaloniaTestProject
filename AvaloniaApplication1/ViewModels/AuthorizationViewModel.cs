@@ -13,7 +13,9 @@ namespace AvaloniaApplication1.ViewModels
         public AuthorizationViewModel(AvaloniaTestBaseContext dBConnect)
         {
             DBConnect = dBConnect;
+            
             serviceList = DBConnect.Services.ToList();
+            
         }
 
         public List<Service> ServiceList { get => serviceList; set => this.RaiseAndSetIfChanged(ref serviceList, value); }

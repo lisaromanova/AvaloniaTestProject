@@ -7,7 +7,7 @@
         x:Class="AvaloniaApplication1.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/school_logo.ico"
-        Title="AvaloniaApplication1">
+        Title="Школа языков Леарн">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -25,7 +25,7 @@
 		</StackPanel>
 		<StackPanel Margin="0,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="0">
 			<TextBlock Classes="Text" Text="Режим администратора" Margin="0,0,0,10"/>
-			<TextBox Classes="Default" FontFamily="Comic Sans MS" Width="100" Name="txtAdmin"/>
+			<TextBox Classes="Default" FontFamily="Comic Sans MS" Width="100" Text="{Binding AdminText}"/>
 		</StackPanel>
 		<ContentControl Grid.Row="1" Content="{Binding UC}" Name="MainFrame"/>
 	</Grid>

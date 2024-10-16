@@ -11,7 +11,7 @@ namespace AvaloniaApplication1.Models
 {
     public partial class Service
     {
-        public static bool adminButton = false;
+        private static bool adminButton = false;
 
         public string myString
         {
