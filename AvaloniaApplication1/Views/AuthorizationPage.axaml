@@ -18,14 +18,14 @@
 				<StackPanel>
 					<StackPanel Margin="5" Orientation="Horizontal" HorizontalAlignment="Right">
 						<TextBlock  Text="Сортировать по:"  Margin="0,5,10,5"/>
-						<ComboBox HorizontalAlignment="Left" Width="200">
+						<ComboBox SelectedIndex="{Binding PageAuthorizationViewVM.IndexSort}" HorizontalAlignment="Left" Width="200">
 							<ComboBoxItem>По возрастанию</ComboBoxItem>
 							<ComboBoxItem>По убыванию</ComboBoxItem>
 						</ComboBox>
 					</StackPanel>
 					<StackPanel Margin="5" HorizontalAlignment="Right" Orientation="Horizontal">
 						<TextBlock Text="Скидка: "/>
-						<ComboBox Margin="10,0,0,0" Name="cbFiltr" Width="200">
+						<ComboBox SelectedIndex="{Binding PageAuthorizationViewVM.IndexDiscount}" Margin="10,0,0,0" Name="cbFiltr" Width="200">
 							<ComboBoxItem>Все</ComboBoxItem>
 							<ComboBoxItem>от 0 до 5%</ComboBoxItem>
 							<ComboBoxItem>от 5% до 15%</ComboBoxItem>
@@ -41,7 +41,7 @@
 						<LineBreak/>
 						и описанию услуги
 					</TextBlock>
-					<TextBox Margin="10,0,0,0" Width="200"/>
+					<TextBox Margin="10,0,0,0" Width="200" Text="{Binding PageAuthorizationViewVM.SearchText}"/>
 				</StackPanel>
 			</StackPanel>
 		</StackPanel>
@@ -76,7 +76,7 @@
 			</ListBox.ItemTemplate>
 		</ListBox>
 		<StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-			<TextBlock  />
+			<TextBlock  Text="{Binding PageAuthorizationViewVM.TextCount}"/>
 		</StackPanel>
 		<Button Content="Добавить услугу" Width="150" Grid.Row="0" HorizontalAlignment="Right" Classes="btnTemplate" />
 		<Button Content="Записать клиента на услугу" Width="230" Grid.Row="2" HorizontalAlignment="Left" Classes="btnTemplate" />

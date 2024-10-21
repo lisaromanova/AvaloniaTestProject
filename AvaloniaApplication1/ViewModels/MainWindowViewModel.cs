@@ -9,9 +9,6 @@ namespace AvaloniaApplication1.ViewModels
     {
         static AvaloniaTestBaseContext DBConnect = new AvaloniaTestBaseContext();
         
-        //private bool adminRole = false;
-        //public bool AdminRole { get => adminRole; set => adminRole = value; }
-        
         private UserControl uc = new AuthorizationPage();
         public UserControl UC { get => uc; set => this.RaiseAndSetIfChanged(ref uc, value); }
 
